@@ -1,0 +1,28 @@
+2025-11-18 15:46:03,576 - INFO - Usando dispositivo: cuda
+2025-11-18 15:46:03,576 - INFO - Carregando modelo de ./llava_emotion_cot_lora_v95_px/final_model
+2025-11-18 15:46:04,186 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-11-18 15:46:06,226 - INFO - Modelo carregado com sucesso
+2025-11-18 15:46:06,226 - INFO - Iniciando avaliação completa...
+2025-11-18 15:46:06,226 - INFO - Carregando dataset de ./dataset_fer/test
+2025-11-18 15:46:06,242 - INFO - Dataset carregado com 1000 amostras
+2025-11-18 16:15:53,157 - INFO - ================================================================================
+2025-11-18 16:15:53,157 - INFO - RELATÓRIO FINAL DE AVALIAÇÃO
+2025-11-18 16:15:53,157 - INFO - ================================================================================
+2025-11-18 16:15:53,157 - INFO - Acurácia: 0.6663
+2025-11-18 16:15:53,157 - INFO - F1-Score (Weighted): 0.6455
+2025-11-18 16:15:53,157 - INFO - F1-Score (Macro): 0.6182
+2025-11-18 16:15:53,157 - INFO - Precision (Weighted): 0.6760
+2025-11-18 16:15:53,157 - INFO - Recall (Weighted): 0.6663
+2025-11-18 16:15:53,157 - INFO - Cohen's Kappa: 0.5945
+2025-11-18 16:15:53,157 - INFO - Amostras válidas: 998/1000
+2025-11-18 16:15:53,157 - INFO - Predições desconhecidas: 2
+2025-11-18 16:15:53,157 - INFO - Erros: 0
+2025-11-18 16:15:53,157 - INFO - 
+Métricas por Classe:
+2025-11-18 16:15:53,157 - INFO - joy          - Prec: 0.8225 | Rec: 0.9498 | F1: 0.8816 | Support: 239.0
+2025-11-18 16:15:53,157 - INFO - anger        - Prec: 0.4426 | Rec: 0.7820 | F1: 0.5652 | Support: 133.0
+2025-11-18 16:15:53,157 - INFO - fear         - Prec: 0.5429 | Rec: 0.1367 | F1: 0.2184 | Support: 139.0
+2025-11-18 16:15:53,158 - INFO - sadness      - Prec: 0.5801 | Rec: 0.6140 | F1: 0.5966 | Support: 171.0
+2025-11-18 16:15:53,158 - INFO - surprise     - Prec: 0.8500 | Rec: 0.7391 | F1: 0.7907 | Support: 138.0
+2025-11-18 16:15:53,158 - INFO - neutral      - Prec: 0.7152 | Rec: 0.6067 | F1: 0.6565 | Support: 178.0
+2025-11-18 16:15:53,158 - INFO - Avaliação concluída com sucesso!

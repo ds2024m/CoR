@@ -1,0 +1,90 @@
+{
+  "evaluation_config": {
+    "model_path": "./llava_emotion_cot_lora_v95_px/final_model",
+    "test_dataset_path": "./dataset_fer/test",
+    "output_dir": "./evaluation_results_cot_95_px",
+    "max_samples": 1000,
+    "log_file": "./evaluation_results_cot_95_px/evaluation_20251118_154603.log",
+    "seed": 42,
+    "emotions": [
+      "joy",
+      "anger",
+      "fear",
+      "sadness",
+      "surprise",
+      "neutral"
+    ]
+  },
+  "summary_metrics": {
+    "accuracy": 0.6663,
+    "weighted_f1": 0.6455,
+    "macro_f1": 0.6182,
+    "weighted_precision": 0.676,
+    "weighted_recall": 0.6663,
+    "cohen_kappa": 0.5945,
+    "total_samples": 1000,
+    "valid_predictions": 998,
+    "unknown_predictions": 2,
+    "error_predictions": 0
+  },
+  "per_class_metrics": {
+    "joy": {
+      "precision": 0.822463768115942,
+      "recall": 0.9497907949790795,
+      "f1": 0.8815533980582524,
+      "support": 239.0
+    },
+    "anger": {
+      "precision": 0.4425531914893617,
+      "recall": 0.7819548872180451,
+      "f1": 0.5652173913043478,
+      "support": 133.0
+    },
+    "fear": {
+      "precision": 0.5428571428571428,
+      "recall": 0.1366906474820144,
+      "f1": 0.21839080459770116,
+      "support": 139.0
+    },
+    "sadness": {
+      "precision": 0.580110497237569,
+      "recall": 0.6140350877192983,
+      "f1": 0.5965909090909091,
+      "support": 171.0
+    },
+    "surprise": {
+      "precision": 0.85,
+      "recall": 0.7391304347826086,
+      "f1": 0.7906976744186046,
+      "support": 138.0
+    },
+    "neutral": {
+      "precision": 0.7152317880794702,
+      "recall": 0.6067415730337079,
+      "f1": 0.6565349544072948,
+      "support": 178.0
+    }
+  },
+  "distributions": {
+    "true_distribution": {
+      "joy": 239,
+      "neutral": 178,
+      "sadness": 171,
+      "fear": 139,
+      "surprise": 138,
+      "anger": 133
+    },
+    "pred_distribution": {
+      "joy": 276,
+      "anger": 235,
+      "sadness": 181,
+      "neutral": 151,
+      "surprise": 120,
+      "fear": 35
+    },
+    "unknown_predictions": 2,
+    "error_predictions": 0,
+    "total_valid_predictions": 998,
+    "total_samples": 1000
+  }
+}
