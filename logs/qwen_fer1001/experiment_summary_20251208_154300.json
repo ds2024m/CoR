@@ -1,0 +1,32 @@
+{
+  "experiment_name": "qwen_fer1001",
+  "duration": "1:36:28.308503",
+  "dataset_size": 1001,
+  "models_tested": [
+    "qwen2vl"
+  ],
+  "methods_tested": [
+    "direct",
+    "cot",
+    "cor"
+  ],
+  "results_summary": {
+    "qwen2vl": {
+      "direct": {
+        "accuracy": 0.5164718384697131,
+        "f1_macro": 0.41750411750634214,
+        "n_valid": 941
+      },
+      "cot": {
+        "accuracy": 0.5409504550050556,
+        "f1_macro": 0.48836160819484925,
+        "n_valid": 989
+      },
+      "cor": {
+        "accuracy": 0.5444555444555444,
+        "f1_macro": 0.48385605353082517,
+        "n_valid": 1001
+      }
+    }
+  }
+}
