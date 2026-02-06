@@ -1,0 +1,30 @@
+{
+  "dataset_dir": "./dataset_emocional_local",
+  "output_dir": "./results_gemma200",
+  "models": [
+    "gemma"
+  ],
+  "methods": [
+    "direct",
+    "cot_single",
+    "cot_multiturn_generic",
+    "cor",
+    "cor_ablation_normal",
+    "cor_ablation_without_face",
+    "cor_ablation_without_body",
+    "cor_ablation_without_context"
+  ],
+  "max_samples": 200,
+  "robustness_repetitions": 3,
+  "compute_efficiency": true,
+  "compute_robustness": true,
+  "start_time": "2026-02-05T13:51:46.546357",
+  "notes": {
+    "cot_multiturn_generic": "Single-agent multi-turn baseline (NO specialization)",
+    "cor": "Chain-of-Responsibility with specialized agents",
+    "cor_ablation_without_face": "CoR without Facial Analyzer",
+    "cor_ablation_without_body": "CoR without Body Analyzer",
+    "cor_ablation_without_context": "CoR without Context Analyzer",
+    "cor_ablation_normal": "CoR with in the same method of ablation"
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "total_calls": 4599,
+  "total_tokens_input": 1341324,
+  "total_tokens_output": 1346990,
+  "total_time": 33481.391441106796,
+  "errors": 1,
+  "steps_by_method": {
+    "direct": 200,
+    "cot_single": 200,
+    "cot_generic_turn1": 200,
+    "cot_generic_turn2": 199,
+    "cot_generic_turn3": 200,
+    "cot_generic_turn4": 200,
+    "cor_Facial_Analyzer": 200,
+    "cor_Body_Analyzer": 200,
+    "cor_Context_Analyzer": 200,
+    "cor_Synthesizer": 200,
+    "cor_ablation_normal_Facial_Analyzer": 200,
+    "cor_ablation_normal_Body_Analyzer": 200,
+    "cor_ablation_normal_Context_Analyzer": 200,
+    "cor_ablation_normal_Synthesizer": 200,
+    "cor_ablation_without_face_Body_Analyzer": 200,
+    "cor_ablation_without_face_Context_Analyzer": 200,
+    "cor_ablation_without_face_Synthesizer": 200,
+    "cor_ablation_without_body_Facial_Analyzer": 200,
+    "cor_ablation_without_body_Context_Analyzer": 200,
+    "cor_ablation_without_body_Synthesizer": 200,
+    "cor_ablation_without_context_Facial_Analyzer": 200,
+    "cor_ablation_without_context_Body_Analyzer": 200,
+    "cor_ablation_without_context_Synthesizer": 200
+  },
+  "tokens_by_method": {
+    "direct": 36061,
+    "cot_single": 90670,
+    "cot_generic_turn1": 74159,
+    "cot_generic_turn2": 183670,
+    "cot_generic_turn3": 252286,
+    "cot_generic_turn4": 264962,
+    "cor_Facial_Analyzer": 130577,
+    "cor_Body_Analyzer": 99968,
+    "cor_Context_Analyzer": 120175,
+    "cor_Synthesizer": 85379,
+    "cor_ablation_normal_Facial_Analyzer": 130577,
+    "cor_ablation_normal_Body_Analyzer": 99968,
+    "cor_ablation_normal_Context_Analyzer": 120175,
+    "cor_ablation_normal_Synthesizer": 85379,
+    "cor_ablation_without_face_Body_Analyzer": 99968,
+    "cor_ablation_without_face_Context_Analyzer": 120175,
+    "cor_ablation_without_face_Synthesizer": 76800,
+    "cor_ablation_without_body_Facial_Analyzer": 130577,
+    "cor_ablation_without_body_Context_Analyzer": 120175,
+    "cor_ablation_without_body_Synthesizer": 69346,
+    "cor_ablation_without_context_Facial_Analyzer": 130577,
+    "cor_ablation_without_context_Body_Analyzer": 99968,
+    "cor_ablation_without_context_Synthesizer": 66722
+  },
+  "time_by_method": {
+    "direct": 506.6761837005615,
+    "cot_single": 1582.333424091339,
+    "cot_generic_turn1": 1454.3242571353912,
+    "cot_generic_turn2": 2509.5994868278503,
+    "cot_generic_turn3": 1751.2572786808014,
+    "cot_generic_turn4": 238.52705240249634,
+    "cor_Facial_Analyzer": 2043.1395404338837,
+    "cor_Body_Analyzer": 1583.897357225418,
+    "cor_Context_Analyzer": 1923.143429517746,
+    "cor_Synthesizer": 970.335723400116,
+    "cor_ablation_normal_Facial_Analyzer": 2108.3604142665863,
+    "cor_ablation_normal_Body_Analyzer": 1443.4614067077637,
+    "cor_ablation_normal_Context_Analyzer": 1918.9247770309448,
+    "cor_ablation_normal_Synthesizer": 972.2624790668488,
+    "cor_ablation_without_face_Body_Analyzer": 1448.789517402649,
+    "cor_ablation_without_face_Context_Analyzer": 1918.8409898281097,
+    "cor_ablation_without_face_Synthesizer": 687.9272062778473,
+    "cor_ablation_without_body_Facial_Analyzer": 2163.984701156616,
+    "cor_ablation_without_body_Context_Analyzer": 1913.5133373737335,
+    "cor_ablation_without_body_Synthesizer": 473.036984205246,
+    "cor_ablation_without_context_Facial_Analyzer": 2025.3587770462036,
+    "cor_ablation_without_context_Body_Analyzer": 1434.376503944397,
+    "cor_ablation_without_context_Synthesizer": 409.3206133842468
+  },
+  "avg_processing_time": 7.28014599719652,
+  "avg_input_tokens": 291.6555772994129,
+  "avg_output_tokens": 292.88758425744726,
+  "avg_total_tokens": 584.5431615568602,
+  "cost_analysis_by_method": {
+    "direct": {
+      "avg_tokens": 180.305,
+      "avg_time": 2.5333809185028078,
+      "total_steps": 200,
+      "total_tokens": 36061,
+      "total_time": 506.6761837005615
+    },
+    "cot_single": {
+      "avg_tokens": 453.35,
+      "avg_time": 7.911667120456696,
+      "total_steps": 200,
+      "total_tokens": 90670,
+      "total_time": 1582.333424091339
+    },
+    "cot_generic_turn1": {
+      "avg_tokens": 370.795,
+      "avg_time": 7.271621285676956,
+      "total_steps": 200,
+      "total_tokens": 74159,
+      "total_time": 1454.3242571353912
+    },
+    "cot_generic_turn2": {
+      "avg_tokens": 922.964824120603,
+      "avg_time": 12.611052697627388,
+      "total_steps": 199,
+      "total_tokens": 183670,
+      "total_time": 2509.5994868278503
+    },
+    "cot_generic_turn3": {
+      "avg_tokens": 1261.43,
+      "avg_time": 8.756286393404007,
+      "total_steps": 200,
+      "total_tokens": 252286,
+      "total_time": 1751.2572786808014
+    },
+    "cot_generic_turn4": {
+      "avg_tokens": 1324.81,
+      "avg_time": 1.1926352620124816,
+      "total_steps": 200,
+      "total_tokens": 264962,
+      "total_time": 238.52705240249634
+    },
+    "cor_Facial_Analyzer": {
+      "avg_tokens": 652.885,
+      "avg_time": 10.215697702169418,
+      "total_steps": 200,
+      "total_tokens": 130577,
+      "total_time": 2043.1395404338837
+    },
+    "cor_Body_Analyzer": {
+      "avg_tokens": 499.84,
+      "avg_time": 7.919486786127091,
+      "total_steps": 200,
+      "total_tokens": 99968,
+      "total_time": 1583.897357225418
+    },
+    "cor_Context_Analyzer": {
+      "avg_tokens": 600.875,
+      "avg_time": 9.61571714758873,
+      "total_steps": 200,
+      "total_tokens": 120175,
+      "total_time": 1923.143429517746
+    },
+    "cor_Synthesizer": {
+      "avg_tokens": 426.895,
+      "avg_time": 4.85167861700058,
+      "total_steps": 200,
+      "total_tokens": 85379,
+      "total_time": 970.335723400116
+    },
+    "cor_ablation_normal_Facial_Analyzer": {
+      "avg_tokens": 652.885,
+      "avg_time": 10.541802071332931,
+      "total_steps": 200,
+      "total_tokens": 130577,
+      "total_time": 2108.3604142665863
+    },
+    "cor_ablation_normal_Body_Analyzer": {
+      "avg_tokens": 499.84,
+      "avg_time": 7.217307033538819,
+      "total_steps": 200,
+      "total_tokens": 99968,
+      "total_time": 1443.4614067077637
+    },
+    "cor_ablation_normal_Context_Analyzer": {
+      "avg_tokens": 600.875,
+      "avg_time": 9.594623885154725,
+      "total_steps": 200,
+      "total_tokens": 120175,
+      "total_time": 1918.9247770309448
+    },
+    "cor_ablation_normal_Synthesizer": {
+      "avg_tokens": 426.895,
+      "avg_time": 4.861312395334243,
+      "total_steps": 200,
+      "total_tokens": 85379,
+      "total_time": 972.2624790668488
+    },
+    "cor_ablation_without_face_Body_Analyzer": {
+      "avg_tokens": 499.84,
+      "avg_time": 7.243947587013245,
+      "total_steps": 200,
+      "total_tokens": 99968,
+      "total_time": 1448.789517402649
+    },
+    "cor_ablation_without_face_Context_Analyzer": {
+      "avg_tokens": 600.875,
+      "avg_time": 9.594204949140549,
+      "total_steps": 200,
+      "total_tokens": 120175,
+      "total_time": 1918.8409898281097
+    },
+    "cor_ablation_without_face_Synthesizer": {
+      "avg_tokens": 384.0,
+      "avg_time": 3.4396360313892362,
+      "total_steps": 200,
+      "total_tokens": 76800,
+      "total_time": 687.9272062778473
+    },
+    "cor_ablation_without_body_Facial_Analyzer": {
+      "avg_tokens": 652.885,
+      "avg_time": 10.81992350578308,
+      "total_steps": 200,
+      "total_tokens": 130577,
+      "total_time": 2163.984701156616
+    },
+    "cor_ablation_without_body_Context_Analyzer": {
+      "avg_tokens": 600.875,
+      "avg_time": 9.567566686868668,
+      "total_steps": 200,
+      "total_tokens": 120175,
+      "total_time": 1913.5133373737335
+    },
+    "cor_ablation_without_body_Synthesizer": {
+      "avg_tokens": 346.73,
+      "avg_time": 2.3651849210262297,
+      "total_steps": 200,
+      "total_tokens": 69346,
+      "total_time": 473.036984205246
+    },
+    "cor_ablation_without_context_Facial_Analyzer": {
+      "avg_tokens": 652.885,
+      "avg_time": 10.126793885231018,
+      "total_steps": 200,
+      "total_tokens": 130577,
+      "total_time": 2025.3587770462036
+    },
+    "cor_ablation_without_context_Body_Analyzer": {
+      "avg_tokens": 499.84,
+      "avg_time": 7.171882519721985,
+      "total_steps": 200,
+      "total_tokens": 99968,
+      "total_time": 1434.376503944397
+    },
+    "cor_ablation_without_context_Synthesizer": {
+      "avg_tokens": 333.61,
+      "avg_time": 2.046603066921234,
+      "total_steps": 200,
+      "total_tokens": 66722,
+      "total_time": 409.3206133842468
+    }
+  },
+  "efficiency_ratio": 40.23100420928839,
+  "token_efficiency": 1.0042241810193309
+}
