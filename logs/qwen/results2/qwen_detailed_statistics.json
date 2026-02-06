@@ -1,0 +1,151 @@
+{
+  "total_calls": 2600,
+  "total_tokens_input": 884305,
+  "total_tokens_output": 682201,
+  "total_time": 2077.715056180954,
+  "errors": 0,
+  "steps_by_method": {
+    "direct": 200,
+    "cot_single": 200,
+    "cot_generic_turn1": 200,
+    "cot_generic_turn2": 200,
+    "cot_generic_turn3": 200,
+    "cot_generic_turn4": 200,
+    "cor_Facial_Analyzer": 200,
+    "cor_Body_Analyzer": 200,
+    "cor_Context_Analyzer": 200,
+    "cor_Synthesizer": 200,
+    "cor_ablation_without_face_Body_Analyzer": 200,
+    "cor_ablation_without_face_Context_Analyzer": 200,
+    "cor_ablation_without_face_Synthesizer": 200
+  },
+  "tokens_by_method": {
+    "direct": 53377,
+    "cot_single": 65811,
+    "cot_generic_turn1": 53221,
+    "cot_generic_turn2": 98489,
+    "cot_generic_turn3": 182593,
+    "cot_generic_turn4": 345752,
+    "cor_Facial_Analyzer": 93364,
+    "cor_Body_Analyzer": 92583,
+    "cor_Context_Analyzer": 129025,
+    "cor_Synthesizer": 113153,
+    "cor_ablation_without_face_Body_Analyzer": 92583,
+    "cor_ablation_without_face_Context_Analyzer": 129025,
+    "cor_ablation_without_face_Synthesizer": 117530
+  },
+  "time_by_method": {
+    "direct": 30.66507601737976,
+    "cot_single": 95.7381865978241,
+    "cot_generic_turn1": 153.98656797409058,
+    "cot_generic_turn2": 173.6953113079071,
+    "cot_generic_turn3": 165.9574625492096,
+    "cot_generic_turn4": 25.383503437042236,
+    "cor_Facial_Analyzer": 35.183297872543335,
+    "cor_Body_Analyzer": 95.92931485176086,
+    "cor_Context_Analyzer": 435.5922646522522,
+    "cor_Synthesizer": 181.91779279708862,
+    "cor_ablation_without_face_Body_Analyzer": 96.41311979293823,
+    "cor_ablation_without_face_Context_Analyzer": 441.62717270851135,
+    "cor_ablation_without_face_Synthesizer": 145.625985622406
+  },
+  "avg_processing_time": 0.799121175454213,
+  "avg_input_tokens": 340.1173076923077,
+  "avg_output_tokens": 262.385,
+  "avg_total_tokens": 602.5023076923077,
+  "cost_analysis_by_method": {
+    "direct": {
+      "avg_tokens": 266.885,
+      "avg_time": 0.1533253800868988,
+      "total_steps": 200,
+      "total_tokens": 53377,
+      "total_time": 30.66507601737976
+    },
+    "cot_single": {
+      "avg_tokens": 329.055,
+      "avg_time": 0.47869093298912047,
+      "total_steps": 200,
+      "total_tokens": 65811,
+      "total_time": 95.7381865978241
+    },
+    "cot_generic_turn1": {
+      "avg_tokens": 266.105,
+      "avg_time": 0.7699328398704529,
+      "total_steps": 200,
+      "total_tokens": 53221,
+      "total_time": 153.98656797409058
+    },
+    "cot_generic_turn2": {
+      "avg_tokens": 492.445,
+      "avg_time": 0.8684765565395355,
+      "total_steps": 200,
+      "total_tokens": 98489,
+      "total_time": 173.6953113079071
+    },
+    "cot_generic_turn3": {
+      "avg_tokens": 912.965,
+      "avg_time": 0.829787312746048,
+      "total_steps": 200,
+      "total_tokens": 182593,
+      "total_time": 165.9574625492096
+    },
+    "cot_generic_turn4": {
+      "avg_tokens": 1728.76,
+      "avg_time": 0.1269175171852112,
+      "total_steps": 200,
+      "total_tokens": 345752,
+      "total_time": 25.383503437042236
+    },
+    "cor_Facial_Analyzer": {
+      "avg_tokens": 466.82,
+      "avg_time": 0.17591648936271667,
+      "total_steps": 200,
+      "total_tokens": 93364,
+      "total_time": 35.183297872543335
+    },
+    "cor_Body_Analyzer": {
+      "avg_tokens": 462.915,
+      "avg_time": 0.4796465742588043,
+      "total_steps": 200,
+      "total_tokens": 92583,
+      "total_time": 95.92931485176086
+    },
+    "cor_Context_Analyzer": {
+      "avg_tokens": 645.125,
+      "avg_time": 2.177961323261261,
+      "total_steps": 200,
+      "total_tokens": 129025,
+      "total_time": 435.5922646522522
+    },
+    "cor_Synthesizer": {
+      "avg_tokens": 565.765,
+      "avg_time": 0.9095889639854431,
+      "total_steps": 200,
+      "total_tokens": 113153,
+      "total_time": 181.91779279708862
+    },
+    "cor_ablation_without_face_Body_Analyzer": {
+      "avg_tokens": 462.915,
+      "avg_time": 0.48206559896469114,
+      "total_steps": 200,
+      "total_tokens": 92583,
+      "total_time": 96.41311979293823
+    },
+    "cor_ablation_without_face_Context_Analyzer": {
+      "avg_tokens": 645.125,
+      "avg_time": 2.208135863542557,
+      "total_steps": 200,
+      "total_tokens": 129025,
+      "total_time": 441.62717270851135
+    },
+    "cor_ablation_without_face_Synthesizer": {
+      "avg_tokens": 587.65,
+      "avg_time": 0.72812992811203,
+      "total_steps": 200,
+      "total_tokens": 117530,
+      "total_time": 145.625985622406
+    }
+  },
+  "efficiency_ratio": 328.34194369941804,
+  "token_efficiency": 0.7714544167388158
+}

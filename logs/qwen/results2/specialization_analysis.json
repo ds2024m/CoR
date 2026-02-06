@@ -1,0 +1,115 @@
+{
+  "qwen": {
+    "agreement_rate": 0.41,
+    "total_comparisons": 200,
+    "agreement_count": 82,
+    "cor_accuracy": 0.565,
+    "cot_generic_accuracy": 0.255,
+    "accuracy_difference": 0.30999999999999994,
+    "avg_time_cor": 3.7431133508682253,
+    "avg_time_cot_generic": 2.5951142263412477,
+    "time_ratio": 1.4423694004966778,
+    "avg_tokens_cor": 2140.625,
+    "avg_tokens_cot_generic": 3400.275,
+    "token_ratio": 0.6295446691811691,
+    "avg_steps_cor": 4.0,
+    "avg_steps_cot_generic": 4.0,
+    "agent_agreement_stats": {
+      "Facial Analyzer": {
+        "unique_emotions": [
+          "sadness",
+          "unknown",
+          "fear",
+          "neutral",
+          "anger",
+          "surprise",
+          "joy"
+        ],
+        "consistency": 0.205,
+        "emotion_distribution": {
+          "neutral": 41,
+          "sadness": 59,
+          "anger": 16,
+          "joy": 75,
+          "unknown": 1,
+          "fear": 5,
+          "surprise": 3
+        }
+      },
+      "Body Analyzer": {
+        "unique_emotions": [
+          "sadness",
+          "fear",
+          "neutral",
+          "anger",
+          "joy"
+        ],
+        "consistency": 0.595,
+        "emotion_distribution": {
+          "neutral": 119,
+          "sadness": 26,
+          "joy": 33,
+          "anger": 16,
+          "fear": 6
+        }
+      },
+      "Context Analyzer": {
+        "unique_emotions": [
+          "sadness",
+          "unknown",
+          "fear",
+          "neutral",
+          "anger",
+          "surprise",
+          "joy"
+        ],
+        "consistency": 0.405,
+        "emotion_distribution": {
+          "neutral": 81,
+          "sadness": 23,
+          "joy": 59,
+          "unknown": 9,
+          "anger": 12,
+          "surprise": 8,
+          "fear": 8
+        }
+      },
+      "Synthesizer": {
+        "unique_emotions": [
+          "sadness",
+          "fear",
+          "neutral",
+          "anger",
+          "surprise",
+          "joy"
+        ],
+        "consistency": 0.3,
+        "emotion_distribution": {
+          "neutral": 60,
+          "joy": 68,
+          "sadness": 45,
+          "anger": 16,
+          "surprise": 6,
+          "fear": 5
+        }
+      }
+    },
+    "cor_predictions_distribution": {
+      "neutral": 60,
+      "joy": 68,
+      "sadness": 45,
+      "anger": 16,
+      "surprise": 6,
+      "fear": 5
+    },
+    "cot_generic_predictions_distribution": {
+      "joy": 176,
+      "anger": 10,
+      "sadness": 4,
+      "surprise": 3,
+      "fear": 6,
+      "neutral": 1
+    },
+    "specialization_benefit": "positive"
+  }
+}
