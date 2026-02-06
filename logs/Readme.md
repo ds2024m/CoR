@@ -5,3 +5,5 @@
 - **LLaVA Pexels (CoR):** `llava_cor_improved_results_pexels_800.json`
 - **LLaVA FER2013 (CoR):** `llava_cor_improved_results_700.json`
 - **Qwen (Direct, CoT & CoR):** `qwen_fer1001`
+- **Qwen Relaxed (Direct, CoT & CoR):** `qwen`
+- **Gemma (Direct, CoT & CoR):** `results_gemma200`
