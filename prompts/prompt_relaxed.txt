@@ -1,0 +1,230 @@
+
+class PromptManager:
+   
+    @staticmethod
+    def get_direct_prompt() -> str:
+        """Prompt direto simplificado - EXATO como no primeiro código"""
+        return (
+            "What is the dominant emotion in this image? \n"
+            "Choose from: joy, anger, fear, sadness, surprise, neutral.\n"
+            f"Conclude with: '{FINAL_TAG_START}Conclusion: the dominant emotion is EMOTION.{FINAL_TAG_END}'\n"
+        )
+
+    @staticmethod
+    def get_cot_single_prompt() -> str:
+        """Prompt COT simplificado - EXATO como no primeiro código"""
+        return (
+            "What is the dominant emotion in this image? \n"
+            "Analyze this image step by step to determine the dominant emotion.\n"
+            "Choose from: joy, anger, fear, sadness, surprise, neutral.\n"
+            f"Conclude with: '{FINAL_TAG_START}Conclusion: the dominant emotion is EMOTION.{FINAL_TAG_END}'\n"
+        )
+
+    @staticmethod
+    def get_cot_multiturn_prompts_reflection() -> List[Tuple[str, str]]:
+        """Prompts para Chain-of-Thought em múltiplos turnos estruturados com reflection"""
+        return [
+            ("Turn 1", 
+             "Analyze the emotion expressed in this image and explain your reasoning"),
+            
+            ("Turn 2",
+             "Review your analysis and identify any weaknesses or missing cues."),
+            
+            ("Turn 3",
+             "Improve your reasoning based on this review."),
+            
+            ("Turn 4",
+             "Make your final decision. Choose ONE emotion from: joy, anger, fear, sadness, surprise, neutral\n\n"
+             f"Format: '{FINAL_TAG_START}Conclusion: the dominant emotion is EMOTION.{FINAL_TAG_END}'")
+        ]
+
+    @staticmethod
+    def get_cot_multiturn_generic_prompts() -> List[Tuple[str, str]]:
+        return [
+            ("Turn 1",
+            "Describe what is happening in these frames."),
+            
+            ("Turn 2",
+            "Provide more details about the visual elements you can see in the scene."),
+            
+            ("Turn 3",
+            "Review your previous descriptions and summarize the overall sequence of events."),
+            
+            ("Turn 4",
+            "Based on your summary, select ONE emotion from: joy, anger, fear, sadness, surprise, neutral.\n\n"
+            f"Format: '{FINAL_TAG_START}Conclusion: the dominant emotion is EMOTION.{FINAL_TAG_END}'")
+        ]
+
+    @staticmethod
+    def get_facial_analyzer_prompt() -> str:
+        """Prompt para agente facial - EXATO como no primeiro código"""
+        return (
+            "You are a facial expression expert. Analyze ONLY the facial features in detail:\n"
+            "1. Eyes: pupil dilation, openness, gaze direction, wrinkles around eyes\n"
+            "2. Eyebrows: position (raised/lowered), tension, curvature\n" 
+            "3. Mouth: lip corners (up/down), openness, tension, shape\n"
+            "4. Overall: facial muscle tension, symmetry, forehead wrinkles\n"
+            "5. Key indicators: smile lines, brow furrowing, nose wrinkling\n\n"        
+            "Be objective and focus only on visible facial cues. Indicate the sentiment. Choose ONE emotion: joy, anger, fear, sadness, surprise, neutral.\n"
+            f"Conclude with: '{FINAL_TAG_START}Conclusion: the dominant emotion is EMOTION.{FINAL_TAG_END}'\n"
+        )
+
+    @staticmethod
+    def get_body_analyzer_prompt() -> str:
+        """Prompt para agente corporal - EXATO como no primeiro código"""
+        return (
+        "You are a specialized agent and need to analyze step by step only the body language and posture, focusing on: \n"
+        " Posture: upright, slouched, tense, relaxed\n"
+        " Gestures: hand positions, arm movements, self-touching\n"
+        " Body orientation: facing direction, openness/closedness\n"
+        " Muscle tension: visible stiffness or relaxation\n"
+        " Overall body positioning and spatial relationship\n\n"
+        " Be concise and detail the body language and posture cues. Indicate the sentiment. Choose from: joy, anger, fear, sadness, surprise, neutral.\n"
+        f"Conclude with: '{FINAL_TAG_START}Conclusion: the dominant emotion is EMOTION.{FINAL_TAG_END}'\n"
+        )
+
+    @staticmethod
+    def get_context_analyzer_prompt() -> str:
+        """Prompt para agente contextual - EXATO como no primeiro código"""
+        return (
+        "You are a specialized agent and need to analyze step by step only the visual context and environment, focusing on\n"
+        " Setting: location, background elements, lighting\n"
+        " Colors: dominant colors, color psychology, contrast\n"
+        " Composition: framing, focus, visual weight\n"
+        " Objects: relevant items, their arrangement and meaning\n"
+        " Atmosphere: overall mood suggested by visual elements\n\n"
+        " Be concise and detail the context and environment cues. Indicate the sentiment. Choose from: joy, anger, fear, sadness, surprise, neutral.\n"
+            f"Conclude with: '{FINAL_TAG_START}Conclusion: the dominant emotion is EMOTION.{FINAL_TAG_END}'\n"
+        )
+
+    @staticmethod
+    def get_synthesizer_prompt() -> str:
+        """Prompt para sintetizador - EXATAMENTE IGUAL AO PRIMEIRO CÓDIGO (COM PLACEHOLDERS)"""
+        return (
+            "You are the final decision maker. Review all analyses:\n"
+            "STEP 1: Review each agent's analysis and their emotion choice.\n"
+            "1. Facial analysis: [facial_emotion]\n"
+            "2. Body analysis: [body_emotion]\n"
+            "3. Context analysis: [context_emotion]\n\n"
+            "STEP 2: Evaluate agreement - if multiple agents agree, that's strong evidence.\n"
+            "STEP 3: Apply priority: Face > Body > Context when there's disagreement.\n"
+            "STEP 4: Consider confidence - some cues are more reliable than others.\n"
+            "STEP 5: Make final decision based on strongest evidence.\n\n"        
+            "Decide the dominant emotion from: joy, anger, fear, sadness, surprise, neutral.\n"
+            f"First explain briefly your reasoning and then conclude with: '{FINAL_TAG_START}Conclusion: the dominant emotion is EMOTION.{FINAL_TAG_END}'\n"
+        )
+
+   
+    @staticmethod
+    def get_synthesizer_prompt_without_face() -> str:
+        """Prompt para sintetizador SEM análise facial (ABLATION SAFE)"""
+        return (
+            "You are the final decision maker. Review all analyses:\n"
+            "IMPORTANT:\n"
+            "- There is NO facial analysis available.\n"
+            "- You MUST NOT infer, imagine, or compensate for facial expressions.\n"
+            "- Facial cues must be completely ignored in the decision process.\n\n"
+            "STEP 1: Review each agent's analysis and their emotion choice.\n"
+            "1. Body analysis: [body_emotion]\n"
+            "2. Context analysis: [context_emotion]\n\n"
+            "STEP 2: Evaluate agreement between body and context.\n"
+            "STEP 3: Apply priority: Body > Context when there's disagreement.\n"
+            "STEP 4: Base confidence ONLY on body posture and situational context.\n"
+            "STEP 5: Make final decision strictly without any facial consideration.\n\n"
+            "Decide the dominant emotion from: joy, anger, fear, sadness, surprise, neutral.\n"
+            f"First explain briefly your reasoning and then conclude with: "
+            f"'{FINAL_TAG_START}Conclusion: the dominant emotion is EMOTION.{FINAL_TAG_END}'\n"
+        )
+
+    @staticmethod
+    def get_synthesizer_prompt_without_context() -> str:
+        """Prompt para sintetizador SEM análise de contexto (ABLATION SAFE)"""
+        return (
+            "You are the final decision maker. Review all analyses:\n"
+            "IMPORTANT:\n"
+            "- There is NO contextual analysis available.\n"
+            "- You MUST NOT infer, imagine, or compensate for situational or environmental context.\n"
+            "- Contextual cues (scene, events, objects, situation) must be completely ignored.\n\n"
+            "STEP 1: Review each agent's analysis and their emotion choice.\n"
+            "1. Facial analysis: [facial_emotion]\n"
+            "2. Body analysis: [body_emotion]\n\n"
+            "STEP 2: Evaluate agreement between facial and body analyses.\n"
+            "STEP 3: Apply priority: Face > Body when there's disagreement.\n"
+            "STEP 4: Base confidence ONLY on facial expressions and body posture.\n"
+            "STEP 5: Make final decision strictly without any contextual consideration.\n\n"
+            "Decide the dominant emotion from: joy, anger, fear, sadness, surprise, neutral.\n"
+            f"First explain briefly your reasoning and then conclude with: "
+            f"'{FINAL_TAG_START}Conclusion: the dominant emotion is EMOTION.{FINAL_TAG_END}'\n"
+        )
+        
+    @staticmethod
+    def get_synthesizer_prompt_without_body() -> str:
+        """Prompt para sintetizador SEM análise corporal (ABLATION SAFE)"""
+        return (
+            "You are the final decision maker. Review all analyses:\n"
+            "IMPORTANT:\n"
+            "- There is NO body analysis available.\n"
+            "- You MUST NOT infer, imagine, or compensate for body posture, gestures, or movement.\n"
+            "- Bodily cues must be completely ignored in the decision process.\n\n"
+            "STEP 1: Review each agent's analysis and their emotion choice.\n"
+            "1. Facial analysis: [facial_emotion]\n"
+            "2. Context analysis: [context_emotion]\n\n"
+            "STEP 2: Evaluate agreement between facial and context analyses.\n"
+            "STEP 3: Apply priority: Face > Context when there's disagreement.\n"
+            "STEP 4: Base confidence ONLY on facial expressions and situational context.\n"
+            "STEP 5: Make final decision strictly without any body-related consideration.\n\n"
+            "Decide the dominant emotion from: joy, anger, fear, sadness, surprise, neutral.\n"
+            f"First explain briefly your reasoning and then conclude with: "
+            f"'{FINAL_TAG_START}Conclusion: the dominant emotion is EMOTION.{FINAL_TAG_END}'\n"
+        )
+
+
+
+
+    @staticmethod
+    def get_cor_prompts() -> List[Tuple[str, str]]:
+        """Prompts para Chain-of-Responsibility padrão - EXATO como no primeiro código"""
+        return [
+            ("Facial Analyzer", PromptManager.get_facial_analyzer_prompt()),
+            ("Body Analyzer", PromptManager.get_body_analyzer_prompt()),
+            ("Context Analyzer", PromptManager.get_context_analyzer_prompt()),
+            ("Synthesizer", PromptManager.get_synthesizer_prompt())
+        ]
+
+    @staticmethod
+    def get_cor_prompts_without_face() -> List[Tuple[str, str]]:
+        """Prompts para CoR sem Facial Analyzer"""
+        return [
+            ("Body Analyzer", PromptManager.get_body_analyzer_prompt()),
+            ("Context Analyzer", PromptManager.get_context_analyzer_prompt()),
+            ("Synthesizer", PromptManager.get_synthesizer_prompt_without_face())
+        ]
+
+    @staticmethod
+    def get_cor_prompts_without_body() -> List[Tuple[str, str]]:
+        """Prompts para CoR sem Body Analyzer"""
+        return [
+            ("Facial Analyzer", PromptManager.get_facial_analyzer_prompt()),
+            ("Context Analyzer", PromptManager.get_context_analyzer_prompt()),
+            ("Synthesizer", PromptManager.get_synthesizer_prompt_without_body())
+        ]
+
+
+    @staticmethod
+    def get_cor_prompts_without_context() -> List[Tuple[str, str]]:
+        """Prompts para CoR sem Context Analyzer"""
+        return [
+            ("Facial Analyzer", PromptManager.get_facial_analyzer_prompt()),
+            ("Body Analyzer", PromptManager.get_body_analyzer_prompt()),
+            ("Synthesizer", PromptManager.get_synthesizer_prompt_without_context())
+        ]
+
+    @staticmethod
+    def get_cor_prompts_ablation_normal() -> List[Tuple[str, str]]:
+        """Prompts para CoR com ordem embaralhada (Context → Synthesizer → Facial → Body)"""
+        return [
+            ("Facial Analyzer", PromptManager.get_facial_analyzer_prompt()),
+            ("Body Analyzer", PromptManager.get_body_analyzer_prompt()),
+            ("Context Analyzer", PromptManager.get_context_analyzer_prompt()),
+            ("Synthesizer", PromptManager.get_synthesizer_prompt())
+        ]
