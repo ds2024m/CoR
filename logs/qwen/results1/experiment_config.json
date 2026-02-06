@@ -1,0 +1,27 @@
+{
+  "dataset_dir": "../dataset_emocional_local",
+  "output_dir": "results/1experimentoadicionalv13_20260203_174356",
+  "models": [
+    "qwen"
+  ],
+  "methods": [
+    "cor",
+    "cor_ablation_normal",
+    "cor_ablation_without_face",
+    "cor_ablation_without_body",
+    "cor_ablation_without_context"
+  ],
+  "max_samples": 200,
+  "robustness_repetitions": 3,
+  "compute_efficiency": true,
+  "compute_robustness": true,
+  "start_time": "2026-02-03T17:43:56.941998",
+  "notes": {
+    "cot_multiturn_generic": "Single-agent multi-turn baseline (NO specialization)",
+    "cor": "Chain-of-Responsibility with specialized agents",
+    "cor_ablation_without_face": "CoR without Facial Analyzer",
+    "cor_ablation_without_body": "CoR without Body Analyzer",
+    "cor_ablation_without_context": "CoR without Context Analyzer",
+    "cor_ablation_normal": "CoR with in the same method of ablation"
+  }
+}

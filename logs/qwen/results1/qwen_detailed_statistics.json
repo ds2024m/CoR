@@ -1,0 +1,191 @@
+{
+  "total_calls": 3400,
+  "total_tokens_input": 1034000,
+  "total_tokens_output": 813256,
+  "total_time": 3082.7231945991516,
+  "errors": 0,
+  "steps_by_method": {
+    "cor_Facial_Analyzer": 200,
+    "cor_Body_Analyzer": 200,
+    "cor_Context_Analyzer": 200,
+    "cor_Synthesizer": 200,
+    "cor_ablation_normal_Facial_Analyzer": 200,
+    "cor_ablation_normal_Body_Analyzer": 200,
+    "cor_ablation_normal_Context_Analyzer": 200,
+    "cor_ablation_normal_Synthesizer": 200,
+    "cor_ablation_without_face_Body_Analyzer": 200,
+    "cor_ablation_without_face_Context_Analyzer": 200,
+    "cor_ablation_without_face_Synthesizer": 200,
+    "cor_ablation_without_body_Facial_Analyzer": 200,
+    "cor_ablation_without_body_Context_Analyzer": 200,
+    "cor_ablation_without_body_Synthesizer": 200,
+    "cor_ablation_without_context_Facial_Analyzer": 200,
+    "cor_ablation_without_context_Body_Analyzer": 200,
+    "cor_ablation_without_context_Synthesizer": 200
+  },
+  "tokens_by_method": {
+    "cor_Facial_Analyzer": 93364,
+    "cor_Body_Analyzer": 92583,
+    "cor_Context_Analyzer": 129025,
+    "cor_Synthesizer": 113153,
+    "cor_ablation_normal_Facial_Analyzer": 93364,
+    "cor_ablation_normal_Body_Analyzer": 92583,
+    "cor_ablation_normal_Context_Analyzer": 129025,
+    "cor_ablation_normal_Synthesizer": 113153,
+    "cor_ablation_without_face_Body_Analyzer": 92583,
+    "cor_ablation_without_face_Context_Analyzer": 129025,
+    "cor_ablation_without_face_Synthesizer": 117530,
+    "cor_ablation_without_body_Facial_Analyzer": 93364,
+    "cor_ablation_without_body_Context_Analyzer": 129025,
+    "cor_ablation_without_body_Synthesizer": 122678,
+    "cor_ablation_without_context_Facial_Analyzer": 93364,
+    "cor_ablation_without_context_Body_Analyzer": 92583,
+    "cor_ablation_without_context_Synthesizer": 120854
+  },
+  "time_by_method": {
+    "cor_Facial_Analyzer": 35.782193660736084,
+    "cor_Body_Analyzer": 96.54147863388062,
+    "cor_Context_Analyzer": 435.07467341423035,
+    "cor_Synthesizer": 182.82800388336182,
+    "cor_ablation_normal_Facial_Analyzer": 36.456212520599365,
+    "cor_ablation_normal_Body_Analyzer": 96.18770360946655,
+    "cor_ablation_normal_Context_Analyzer": 434.7425889968872,
+    "cor_ablation_normal_Synthesizer": 183.21091485023499,
+    "cor_ablation_without_face_Body_Analyzer": 96.48040270805359,
+    "cor_ablation_without_face_Context_Analyzer": 434.91369915008545,
+    "cor_ablation_without_face_Synthesizer": 144.23775720596313,
+    "cor_ablation_without_body_Facial_Analyzer": 35.99909329414368,
+    "cor_ablation_without_body_Context_Analyzer": 434.8911783695221,
+    "cor_ablation_without_body_Synthesizer": 160.86645913124084,
+    "cor_ablation_without_context_Facial_Analyzer": 36.654104471206665,
+    "cor_ablation_without_context_Body_Analyzer": 96.3517644405365,
+    "cor_ablation_without_context_Synthesizer": 141.50496625900269
+  },
+  "avg_processing_time": 0.9066832925291622,
+  "avg_input_tokens": 304.11764705882354,
+  "avg_output_tokens": 239.19294117647058,
+  "avg_total_tokens": 543.3105882352941,
+  "cost_analysis_by_method": {
+    "cor_Facial_Analyzer": {
+      "avg_tokens": 466.82,
+      "avg_time": 0.17891096830368042,
+      "total_steps": 200,
+      "total_tokens": 93364,
+      "total_time": 35.782193660736084
+    },
+    "cor_Body_Analyzer": {
+      "avg_tokens": 462.915,
+      "avg_time": 0.4827073931694031,
+      "total_steps": 200,
+      "total_tokens": 92583,
+      "total_time": 96.54147863388062
+    },
+    "cor_Context_Analyzer": {
+      "avg_tokens": 645.125,
+      "avg_time": 2.1753733670711517,
+      "total_steps": 200,
+      "total_tokens": 129025,
+      "total_time": 435.07467341423035
+    },
+    "cor_Synthesizer": {
+      "avg_tokens": 565.765,
+      "avg_time": 0.9141400194168091,
+      "total_steps": 200,
+      "total_tokens": 113153,
+      "total_time": 182.82800388336182
+    },
+    "cor_ablation_normal_Facial_Analyzer": {
+      "avg_tokens": 466.82,
+      "avg_time": 0.1822810626029968,
+      "total_steps": 200,
+      "total_tokens": 93364,
+      "total_time": 36.456212520599365
+    },
+    "cor_ablation_normal_Body_Analyzer": {
+      "avg_tokens": 462.915,
+      "avg_time": 0.4809385180473328,
+      "total_steps": 200,
+      "total_tokens": 92583,
+      "total_time": 96.18770360946655
+    },
+    "cor_ablation_normal_Context_Analyzer": {
+      "avg_tokens": 645.125,
+      "avg_time": 2.173712944984436,
+      "total_steps": 200,
+      "total_tokens": 129025,
+      "total_time": 434.7425889968872
+    },
+    "cor_ablation_normal_Synthesizer": {
+      "avg_tokens": 565.765,
+      "avg_time": 0.916054574251175,
+      "total_steps": 200,
+      "total_tokens": 113153,
+      "total_time": 183.21091485023499
+    },
+    "cor_ablation_without_face_Body_Analyzer": {
+      "avg_tokens": 462.915,
+      "avg_time": 0.48240201354026796,
+      "total_steps": 200,
+      "total_tokens": 92583,
+      "total_time": 96.48040270805359
+    },
+    "cor_ablation_without_face_Context_Analyzer": {
+      "avg_tokens": 645.125,
+      "avg_time": 2.174568495750427,
+      "total_steps": 200,
+      "total_tokens": 129025,
+      "total_time": 434.91369915008545
+    },
+    "cor_ablation_without_face_Synthesizer": {
+      "avg_tokens": 587.65,
+      "avg_time": 0.7211887860298156,
+      "total_steps": 200,
+      "total_tokens": 117530,
+      "total_time": 144.23775720596313
+    },
+    "cor_ablation_without_body_Facial_Analyzer": {
+      "avg_tokens": 466.82,
+      "avg_time": 0.17999546647071837,
+      "total_steps": 200,
+      "total_tokens": 93364,
+      "total_time": 35.99909329414368
+    },
+    "cor_ablation_without_body_Context_Analyzer": {
+      "avg_tokens": 645.125,
+      "avg_time": 2.1744558918476105,
+      "total_steps": 200,
+      "total_tokens": 129025,
+      "total_time": 434.8911783695221
+    },
+    "cor_ablation_without_body_Synthesizer": {
+      "avg_tokens": 613.39,
+      "avg_time": 0.8043322956562042,
+      "total_steps": 200,
+      "total_tokens": 122678,
+      "total_time": 160.86645913124084
+    },
+    "cor_ablation_without_context_Facial_Analyzer": {
+      "avg_tokens": 466.82,
+      "avg_time": 0.18327052235603333,
+      "total_steps": 200,
+      "total_tokens": 93364,
+      "total_time": 36.654104471206665
+    },
+    "cor_ablation_without_context_Body_Analyzer": {
+      "avg_tokens": 462.915,
+      "avg_time": 0.4817588222026825,
+      "total_steps": 200,
+      "total_tokens": 92583,
+      "total_time": 96.3517644405365
+    },
+    "cor_ablation_without_context_Synthesizer": {
+      "avg_tokens": 604.27,
+      "avg_time": 0.7075248312950134,
+      "total_steps": 200,
+      "total_tokens": 120854,
+      "total_time": 141.50496625900269
+    }
+  },
+  "efficiency_ratio": 263.8109063521508,
+  "token_efficiency": 0.786514504183608
+}
