@@ -7,3 +7,4 @@
 - **Qwen (Direct, CoT & CoR):** `qwen_fer1001`
 - **Qwen Relaxed (Direct, CoT & CoR):** `qwen`
 - **Gemma (Direct, CoT & CoR):** `results_gemma200`
+- **Captioning:** z_captioning_results2.json and z_summary_metrics2.json
